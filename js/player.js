@@ -160,8 +160,15 @@ class Player {
         }
         return false; // Devuelve false si no fue golpeado (invencible, malo, eliminado)
     }
-}
+} // <-- Cierre de la clase Player
 
 // Clase específica para el Malo (hereda de Player)
 class Malo extends Player {
-    constructor(id, x,
+    constructor(id, x, y) {
+        super(id, x, y, PLAYER_COLOR_BAD, true); // Es malo, color específico
+        this.speed = PLAYER_SPEED * 1.2; // El Malo es un poco más rápido
+        this.state = 'wandering'; // Estado inicial del Malo
+    }
+} // <-- Cierre de la clase Malo
+
+// Clase específica para los Niños (hereda de Player)
