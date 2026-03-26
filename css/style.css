@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222; /* Fondo oscuro para resaltar el juego */
+    color: #eee;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Evita barras de scroll innecesarias */
+}
+
+.game-container {
+    text-align: center;
+    border: 2px solid #555;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin-top: 0;
+    color: #00ff00; /* Un color llamativo para el título */
+}
+
+#gameCanvas {
+    border: 3px solid #00ff00; /* Borde verde para el área de juego */
+    background-color: #000; /* Fondo negro por defecto para el canvas */
+    display: block; /* Para que el canvas se comporte como un bloque y se centre */
+    margin: 20px auto;
+    /* image-rendering: pixelated; /* Descomentar si usas gráficos pixel art */
+    /* image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges; */
+}
+
+.info-panel {
+    margin-top: 15px;
+    font-size: 0.9em;
+    border-top: 1px dashed #555;
+    padding-top: 10px;
+}
+
+.info-panel p {
+    margin: 5px 0;
+}
+
+#score-display {
+    font-weight: bold;
+    color: #ffff00; /* Amarillo para la puntuación */
+    margin-top: 10px;
+}
