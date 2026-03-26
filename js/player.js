@@ -164,17 +164,4 @@ class Player {
 
 // Clase específica para el Malo (hereda de Player)
 class Malo extends Player {
-    constructor(id, x, y) {
-        super(id, x, y, PLAYER_COLOR_BAD, true); // Es malo, color específico
-        this.speed = PLAYER_SPEED * 1.2; // El Malo es un poco más rápido
-        this.state = 'wandering'; // Estado inicial del Malo
-    }
-
-    // El Malo no tiene vidas en el mismo sentido que los niños,
-    // su derrota podría ser diferente (ej: si la pelota llega a su base)
-    // Por ahora, no implementamos lógica de vidas para el Malo.
-}
-
-// Clase específica para los Niños (hereda de Player)
-class Nino extends Player {
-    constructor(id, x, y, color) {
+    constructor(id, x,
