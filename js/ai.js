@@ -58,9 +58,7 @@ class AI {
                     player.x += Math.cos(evadeAngle) * player.speed * 1.5; // Moverse más rápido para evadir
                     player.y += Math.sin(evadeAngle) * player.speed * 1.5;
                 } else {
-                    // Moverse hacia la pelota si el malo la tiene
-                    // (Esto es más complejo, podría ser solo moverse aleatoriamente o hacia la madrina)
-                    // Por ahora, si el malo tiene la pelota y está cerca, intentará ir a la madrina
+                    // Moverse hacia la madrina si el malo tiene la pelota y está cerca
                     player.state = 'running_to_madrina';
                 }
             }
@@ -138,3 +136,9 @@ class AI {
                     if (utils.distance(player.x, player.y, ball.x, ball.y) < player.radius + ball.radius) {
                         player.pickupBall(ball);
                         console.log("Malo recogió la pelota!");
+                    }
+                }
+            }
+        });
+    }
+}
